@@ -53,10 +53,12 @@ Create a beautiful, futuristic Happy New Year gift website for Kudra's best frie
 
 ```
 /home/kamila/Desktop/Tasks/trials/Kudraa/
-├── index.html    (Main webpage)
-├── style.css     (Styling with dark mode & animations)
-├── script.js     (Interactivity, password, animations)
-└── todo.md       (This plan)
+├── index.html         (Main webpage - web version)
+├── style.css          (Styling with dark mode & animations)
+├── script.js          (Interactivity, password, animations)
+├── happy_new_year.jl  (Julia TUI version)
+├── JULIA_TUI_README.md (Julia version instructions)
+└── todo.md            (This plan)
 ```
 
 ---
@@ -100,6 +102,14 @@ Create a beautiful, futuristic Happy New Year gift website for Kudra's best frie
 - [x] Check for accessibility
 - [x] Prepare for GitHub Pages deployment
 - [x] Create README.md with deployment instructions
+
+### Step 5: Julia TUI Version (Bonus!)
+- [x] Create Julia TUI version with ANSI colors
+- [x] Implement password protection in terminal
+- [x] Add ASCII art header for "2026"
+- [x] Create styled wish cards with box drawing
+- [x] Add typing animation effect
+- [x] Create JULIA_TUI_README.md with run instructions
 
 ---
 
