@@ -118,7 +118,7 @@ Create a beautiful, futuristic Happy New Year gift website for Kudra's best frie
 
 ## 🔐 Password Feature Details
 - Simple client-side password check
-- Password: "KudraBestFriend2025"
+- Password: "2026"
 - Error message with shake animation
 - Success transition with fade effect
 

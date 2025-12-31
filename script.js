@@ -345,5 +345,5 @@ document.querySelectorAll('.wish-card').forEach(card => {
     });
 });
 
-console.log('🎆 Happy New Year 2025! Made with ❤️ by Kudra');
+console.log('🎆 Happy New Year 2026! Made with ❤️ by Kudra');
 

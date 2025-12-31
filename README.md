@@ -1,4 +1,4 @@
-# 🎆 Happy New Year 2025 - Gift Website
+# 🎆 Happy New Year 2026 - Gift Website
 
 A beautiful, futuristic Happy New Year gift website for your best friend! 🎉
 
@@ -13,7 +13,7 @@ A beautiful, futuristic Happy New Year gift website for your best friend! 🎉
 
 ## 🔑 Password
 
-The default password is: `KudraBestFriend2025`
+The default password is: `2026`
 
 You can change this in `script.js` by modifying the `CORRECT_PASSWORD` constant.
 
@@ -90,5 +90,5 @@ Open `index.html` directly in your browser to preview locally!
 
 ## 💖 Made with Love
 
-Created by Kudra for her best friend. Happy New Year 2025! 🎊
+Created by Kudra for her best friend. Happy New Year 2026! 🎊
 
