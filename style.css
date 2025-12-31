@@ -1,0 +1,546 @@
+/* CSS Variables for Dark Cobalt Blue Theme */
+:root {
+    --bg-primary: #0a0a14;
+    --bg-secondary: #0f0f1f;
+    --bg-card: rgba(42, 82, 152, 0.1);
+    --cobalt-blue: #0047AB;
+    --cobalt-light: #4169E1;
+    --cobalt-glow: #6495ED;
+    --cobalt-cyan: #00BFFF;
+    --neon-gold: #ffd700;
+    --text-primary: #e0e8ff;
+    --text-secondary: #8ba4d4;
+    --gradient-cobalt: linear-gradient(135deg, #0047AB, #4169E1);
+    --gradient-cobalt-cyan: linear-gradient(135deg, #0047AB, #00BFFF);
+    --glow-cobalt: 0 0 20px rgba(0, 71, 171, 0.5);
+    --glow-cobalt-light: 0 0 20px rgba(65, 105, 225, 0.5);
+    --glow-cyan: 0 0 20px rgba(0, 191, 255, 0.5);
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Particle Background Canvas */
+#particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Screen Management */
+.screen {
+    display: none;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+.screen.active {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==================== PASSWORD SCREEN ==================== */
+#password-screen {
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-primary);
+}
+
+.password-container {
+    text-align: center;
+    padding: 3rem;
+    background: var(--bg-card);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 71, 171, 0.3);
+    box-shadow: 0 0 50px rgba(0, 71, 171, 0.2);
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.lock-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.password-container h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    background: var(--gradient-cobalt-cyan);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.password-container .subtitle {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#password-input {
+    padding: 15px 25px;
+    font-size: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+    outline: none;
+    transition: all 0.3s ease;
+    width: 250px;
+}
+
+#password-input:focus {
+    border-color: var(--neon-cyan);
+    box-shadow: var(--glow-cyan);
+}
+
+#password-input::placeholder {
+    color: var(--text-secondary);
+}
+
+#submit-password {
+    padding: 15px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50px;
+    background: var(--gradient-cobalt-cyan);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+#submit-password:hover {
+    transform: scale(1.05);
+    box-shadow: var(--glow-cyan);
+}
+
+.error {
+    color: #ff4444;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    min-height: 20px;
+}
+
+.error.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-10px); }
+    40%, 80% { transform: translateX(10px); }
+}
+
+/* ==================== HERO SECTION ==================== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.year-display {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.year-text {
+    font-size: clamp(4rem, 15vw, 10rem);
+    font-weight: bold;
+    background: var(--gradient-cobalt-cyan);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: neonFlicker 2s ease-in-out infinite;
+}
+
+@keyframes neonFlicker {
+    0%, 100% { opacity: 1; text-shadow: 0 0 30px rgba(0, 71, 171, 0.5); }
+    50% { opacity: 0.9; text-shadow: 0 0 50px rgba(0, 191, 255, 0.5); }
+}
+
+.year-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(0, 245, 255, 0.2) 0%, transparent 70%);
+    z-index: -1;
+    animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+}
+
+.main-title {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    margin: 1rem 0;
+    color: var(--text-primary);
+}
+
+.hero .subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    animation: bounce 2s ease-in-out infinite;
+    color: var(--cobalt-cyan);
+    font-size: 0.9rem;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+
+/* ==================== GREETING SECTION ==================== */
+.greeting {
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.greeting-card {
+    max-width: 800px;
+    padding: 3rem;
+    background: var(--bg-card);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.greeting-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--neon-gold);
+}
+
+.message {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+/* ==================== WISHES SECTION ==================== */
+.wishes {
+    padding: 4rem 2rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    background: var(--gradient-cobalt-cyan);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.wishes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.wish-card {
+    padding: 2rem;
+    background: var(--bg-card);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.wish-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient-cobalt-cyan);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.wish-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--glow-cobalt);
+    border-color: rgba(0, 71, 171, 0.3);
+}
+
+.wish-card:hover::before {
+    transform: scaleX(1);
+}
+
+.wish-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    animation: floatIcon 3s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.wish-card:nth-child(2) .wish-icon { animation-delay: 0.5s; }
+.wish-card:nth-child(3) .wish-icon { animation-delay: 1s; }
+.wish-card:nth-child(4) .wish-icon { animation-delay: 1.5s; }
+.wish-card:nth-child(5) .wish-icon { animation-delay: 2s; }
+.wish-card:nth-child(6) .wish-icon { animation-delay: 2.5s; }
+
+.wish-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--cobalt-cyan);
+}
+
+.wish-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ==================== SPECIAL MESSAGE ==================== */
+.special-message {
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.quote-card {
+    max-width: 700px;
+    padding: 3rem;
+    background: linear-gradient(135deg, rgba(0, 71, 171, 0.2), rgba(0, 191, 255, 0.1));
+    border-radius: 20px;
+    border: 1px solid rgba(0, 71, 171, 0.3);
+    text-align: center;
+    animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+.quote {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.signature {
+    color: var(--neon-gold);
+    font-weight: bold;
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.from-text {
+    font-size: 1.2rem;
+    color: var(--neon-magenta);
+}
+
+.year-label {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+/* ==================== CONFETTI ==================== */
+#confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--neon-cyan);
+    animation: confettiFall linear forwards;
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translateY(-100%) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 768px) {
+    .password-container {
+        padding: 2rem;
+        margin: 1rem;
+    }
+
+    .password-container h1 {
+        font-size: 1.5rem;
+    }
+
+    #password-input {
+        width: 100%;
+    }
+
+    #submit-password {
+        width: 100%;
+    }
+
+    .greeting-card {
+        padding: 2rem;
+    }
+
+    .greeting-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .wishes-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .wish-card {
+        padding: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .quote-card {
+        padding: 2rem;
+    }
+
+    .quote {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .year-text {
+        font-size: 5rem;
+    }
+
+    .main-title {
+        font-size: 1.2rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1rem;
+    }
+}
+
+/* ==================== UTILITY CLASSES ==================== */
+.hidden {
+    display: none !important;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+    background: var(--neon-cyan);
+    color: var(--bg-primary);
+}
+

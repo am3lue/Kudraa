@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎆 Happy New Year 2025 🎆</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Particle Background -->
+    <canvas id="particles"></canvas>
+
+    <!-- Password Screen -->
+    <section id="password-screen" class="screen active">
+        <div class="password-container">
+            <div class="lock-icon">🔐</div>
+            <h1>Enter the Magic</h1>
+            <p class="subtitle">A special gift awaits you...</p>
+            <div class="input-group">
+                <input type="password" id="password-input" placeholder="Enter password" autocomplete="off">
+                <button id="submit-password">✨ Unlock</button>
+            </div>
+            <p id="password-error" class="error"></p>
+        </div>
+    </section>
+
+    <!-- Main Content Screen -->
+    <section id="main-screen" class="screen">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="year-display">
+                    <span class="year-text">2025</span>
+                    <div class="year-glow"></div>
+                </div>
+                <h1 class="main-title" id="typing-text"></h1>
+                <p class="subtitle">Let's make this year amazing together! ✨</p>
+            </div>
+            <div class="scroll-indicator">
+                <span>↓ Scroll for Wishes ↓</span>
+            </div>
+        </section>
+
+        <!-- Personal Greeting -->
+        <section class="greeting">
+            <div class="greeting-card">
+                <h2>Dear My Best Friend,</h2>
+                <p class="message">
+                    As we step into this new year, I want to take a moment to tell you how grateful I am for having you in my life. 
+                    You are not just my best friend, you are my family. Here's to another year of adventures, laughter, and memories!
+                </p>
+            </div>
+        </section>
+
+        <!-- Wishes Section -->
+        <section class="wishes">
+            <h2 class="section-title">🎊 My Wishes for You 🎊</h2>
+            <div class="wishes-grid">
+                <div class="wish-card" data-wish="success">
+                    <div class="wish-icon">✨</div>
+                    <h3>Success</h3>
+                    <p>May all your dreams and goals come true in this new year. Success follows you in everything you do!</p>
+                </div>
+                <div class="wish-card" data-wish="happiness">
+                    <div class="wish-icon">💫</div>
+                    <h3>Happiness</h3>
+                    <p>Endless joy and happiness fill your days. May your smile never fade and laughter echo forever!</p>
+                </div>
+                <div class="wish-card" data-wish="love">
+                    <div class="wish-icon">❤️</div>
+                    <h3>Love</h3>
+                    <p>May your heart be filled with love and warmth. Beautiful moments shared with loved ones await you!</p>
+                </div>
+                <div class="wish-card" data-wish="dreams">
+                    <div class="wish-icon">🌟</div>
+                    <h3>Dreams</h3>
+                    <p>All your dreams take flight in 2025. Every star in the sky is within your reach!</p>
+                </div>
+                <div class="wish-card" data-wish="health">
+                    <div class="wish-icon">💪</div>
+                    <h3>Health</h3>
+                    <p>Strong body, sharp mind, and vibrant spirit. May you be blessed with excellent health!</p>
+                </div>
+                <div class="wish-card" data-wish="adventure">
+                    <div class="wish-icon">🌍</div>
+                    <h3>Adventure</h3>
+                    <p>Exciting journeys and unforgettable adventures await. The world is yours to explore!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Message -->
+        <section class="special-message">
+            <div class="quote-card">
+                <p class="quote">"Best friends are the people who make your life brighter, especially on the darkest days."</p>
+                <p class="signature">— Here's to us! 🥂</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <p class="from-text">From Blue with ❤️</p>
+                <p class="year-label">2025</p>
+            </div>
+        </footer>
+    </section>
+
+    <!-- Confetti Container -->
+    <div id="confetti-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
